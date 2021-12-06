@@ -1,0 +1,8 @@
+.navbar .container-fluid {
+    background-color:#4AF26A;
+    border-radius: 5px;
+}
+.nav-link{
+    border: 1px solid black;
+    border-radius: 5px;
+}
