@@ -6,7 +6,7 @@ let count = 0;
 for (const product of products) {
     // console.log(iterator);
     product.addEventListener('click', () => {
-        console.log(product.parentElement.parentElement.parentElement.classList)
+        console.log(product.parentElement.parentElement.parentElement.classList[0])
         // addToBasket();
     });
 }
