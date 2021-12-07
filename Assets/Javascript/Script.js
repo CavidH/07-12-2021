@@ -2,8 +2,8 @@ let basket = []
 let addproducts = document.getElementsByClassName("plus");
 //console.log(addproducts)
 let countProductCards = document.getElementsByClassName("count-product");
-console.log(countProductCards[1])
-console.log(countProductCards[0].parentElement.parentElement.parentElement.classList[0])
+//console.log(countProductCards[1])
+//console.log(countProductCards[0].parentElement.parentElement.parentElement.classList[0])
 
 let removeproducts = document.getElementsByClassName("minus");
 //console.log(removeproducts)
@@ -25,8 +25,12 @@ function countCardProductsCalc() {
 
         //    countCardProduct.innerText=
         for (let index = 0; index < basket.length; index++) {
-            if (countCardProduct.parentElement.parentElement.parentElement.classList[0] == basket[i].name) {
-                    countCardProduct.innerText=basket[i].count;
+            if (countCardProduct.parentElement.parentElement.parentElement.classList[0] == basket[index].name) {
+                for(let index = 0; index < basket.countProductCards; index++){}
+                    console.log(countCardProduct[index])
+                    // console.log(countCardProduct.parentElement.parentElement.parentElement.classList[0])
+
+                // countCardProduct.innerText=basket[i].count;
                  }
 
         }
@@ -41,7 +45,7 @@ function addProduct() {
             // console.log(product.parentElement.parentElement.parentElement.classList[0])
             checkBasket(product.parentElement.parentElement.parentElement.classList[0])
             addProductBasketForCount();
-            console.log(basket)
+            //console.log(basket)
 
         });
 
@@ -58,7 +62,7 @@ function removeProduct() {
             // console.log(product.parentElement.parentElement.parentElement.classList[0])
             checkBasketForRemove(product.parentElement.parentElement.parentElement.classList[0])
             // removeProductBasketForCount();
-            console.log(basket)
+           // console.log(basket)
 
         });
 
@@ -103,7 +107,7 @@ function checkBasket(productName) {
     for (let index = 0; index < basket.length; index++) {
         if (basket[index].name != productName) {
             addElementToBasket(productName);
-            console.log("element yaradildi")
+           // console.log("element yaradildi")
             return;
         }
 
@@ -130,7 +134,7 @@ function checkBasket(productName) {
 // }
 
 function addElementToBasket(productName) {
-    console.log("element add ")
+   // console.log("element add ")
 
     basket.push({
         name: productName,
@@ -141,14 +145,14 @@ function addElementToBasket(productName) {
 function addProductBasketForCount() {
     count += 1
     let basket = document.querySelector(".count")
-    console.log(basket)
+   // console.log(basket)
     basket.innerText = count
 }
 function removeProductBasketForCount() {
 
     count -= 1
     let basket = document.querySelector(".count")
-    console.log(basket)
+   // console.log(basket)
     basket.innerText = count
 
 }
