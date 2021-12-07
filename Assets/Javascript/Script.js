@@ -1,6 +1,9 @@
 let basket = []
 let addproducts = document.getElementsByClassName("plus");
 //console.log(addproducts)
+let countProductCards = document.getElementsByClassName("count-product");
+ console.log(countProductCards.parentElement.parentElement.parentElement.classList)
+ 
 let removeproducts = document.getElementsByClassName("minus");
 //console.log(removeproducts)
 let count = 0;
@@ -14,6 +17,18 @@ addProduct()
 removeProduct()
 
 //add
+
+function countCardProductsCalc(){
+    for (const countCardProduct of countProductCards) {
+
+            //    countCardProduct.innerText=
+            for (let index = 0; index < basket.length; index++) {
+                 
+                
+            }
+         
+    }
+}
 function addProduct() {
     for (const product of addproducts) {
         // console.log(iterator);
@@ -126,12 +141,10 @@ function addProductBasketForCount() {
     basket.innerText = count
 }
 function removeProductBasketForCount(){
-    if(count>0){
+     
     count -= 1
     let basket = document.querySelector(".count")
     console.log(basket)
-    basket.innerText = count}
-    else{
-        alert("sebet bosdu")
-    }
+    basket.innerText = count
+     
 }
