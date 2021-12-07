@@ -10,33 +10,28 @@ let removeproducts = document.getElementsByClassName("minus");
 let count = 0;
 
 
-basket.push({ name: "testmodel", count: 45 })
 
+
+basket.push({ name: "testmodel", count: 45 })
 // console.log(products)
 
 addProduct()
 removeProduct()
-countCardProductsCalc()
 
 //add
+// function getByIndex(){
+//     for (let index = 0; index < basket.length; index++) {
+            
+//             }
+// }
 
-function countCardProductsCalc() {
-    for (const countCardProduct of countProductCards) {
+// function countCardProductsCalc() {
+//     for  (let index = 0; index < countProductCards.length; index++) {
+            
+//             countProductCards[index].innerText=getByIndex(index)
 
-        //    countCardProduct.innerText=
-        for (let index = 0; index < basket.length; index++) {
-            if (countCardProduct.parentElement.parentElement.parentElement.classList[0] == basket[index].name) {
-                for(let index = 0; index < basket.countProductCards; index++){}
-                    console.log(countCardProduct[index])
-                    // console.log(countCardProduct.parentElement.parentElement.parentElement.classList[0])
-
-                // countCardProduct.innerText=basket[i].count;
-                 }
-
-        }
-
-    }
-}
+//     }
+// }
 function addProduct() {
     for (const product of addproducts) {
         // console.log(iterator);
@@ -44,7 +39,7 @@ function addProduct() {
             // if (yoxla)
             // console.log(product.parentElement.parentElement.parentElement.classList[0])
             checkBasket(product.parentElement.parentElement.parentElement.classList[0])
-            addProductBasketForCount();
+            countCardProductsCalc();
             //console.log(basket)
 
         });
