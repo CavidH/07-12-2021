@@ -2,8 +2,9 @@ let basket = []
 let addproducts = document.getElementsByClassName("plus");
 //console.log(addproducts)
 let countProductCards = document.getElementsByClassName("count-product");
- console.log(countProductCards.parentElement.parentElement.parentElement.classList)
- 
+console.log(countProductCards[1])
+console.log(countProductCards[0].parentElement.parentElement.parentElement.classList[0])
+
 let removeproducts = document.getElementsByClassName("minus");
 //console.log(removeproducts)
 let count = 0;
@@ -15,18 +16,21 @@ basket.push({ name: "testmodel", count: 45 })
 
 addProduct()
 removeProduct()
+countCardProductsCalc()
 
 //add
 
-function countCardProductsCalc(){
+function countCardProductsCalc() {
     for (const countCardProduct of countProductCards) {
 
-            //    countCardProduct.innerText=
-            for (let index = 0; index < basket.length; index++) {
-                 
-                
-            }
-         
+        //    countCardProduct.innerText=
+        for (let index = 0; index < basket.length; index++) {
+            if (countCardProduct.parentElement.parentElement.parentElement.classList[0] == basket[i].name) {
+                    countCardProduct.innerText=basket[i].count;
+                 }
+
+        }
+
     }
 }
 function addProduct() {
@@ -69,7 +73,7 @@ function checkBasketForRemove(productName) {
             if (basket[index].count > 0) {
                 basket[index].count--;
                 removeProductBasketForCount();
-            }else{
+            } else {
                 alert("Sebetnizde qeyd olunan mehsul artiq yoxdur")
             }
 
@@ -107,23 +111,23 @@ function checkBasket(productName) {
     }
 }
 
-    // let flag = true;
-    // for (let index = 0; index < basket.length; index++) {
-    //     if (basket[index].name == productName) {
-    //         basket[index].count++;
-    //         flag = false;
-    //         break;
-    //     }
-    // }
-    // if (flag) {
-    //     addElementToBasket(productName)
+// let flag = true;
+// for (let index = 0; index < basket.length; index++) {
+//     if (basket[index].name == productName) {
+//         basket[index].count++;
+//         flag = false;
+//         break;
+//     }
+// }
+// if (flag) {
+//     addElementToBasket(productName)
 
-    // }
+// }
 
-    // } else {
-    //     console.log("leng 0 di")
-    //     addElementToBasket(productName)
-    // }
+// } else {
+//     console.log("leng 0 di")
+//     addElementToBasket(productName)
+// }
 
 function addElementToBasket(productName) {
     console.log("element add ")
@@ -140,11 +144,11 @@ function addProductBasketForCount() {
     console.log(basket)
     basket.innerText = count
 }
-function removeProductBasketForCount(){
-     
+function removeProductBasketForCount() {
+
     count -= 1
     let basket = document.querySelector(".count")
     console.log(basket)
     basket.innerText = count
-     
+
 }
